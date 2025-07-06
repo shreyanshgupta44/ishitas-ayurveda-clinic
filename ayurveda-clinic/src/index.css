@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-gray-900 bg-gradient-to-br from-ayurveda-50 to-earth-50;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-ayurveda-600 hover:bg-ayurveda-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-gentle hover:shadow-soft;
+  }
+  
+  .btn-secondary {
+    @apply bg-earth-500 hover:bg-earth-600 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-gentle hover:shadow-soft;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-ayurveda-600 text-ayurveda-600 hover:bg-ayurveda-600 hover:text-white font-medium py-3 px-6 rounded-lg transition-all duration-300;
+  }
+  
+  .card {
+    @apply bg-white/80 backdrop-blur-sm rounded-xl shadow-gentle hover:shadow-soft transition-all duration-300 p-6;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-serif font-semibold text-ayurveda-800 mb-4;
+  }
+  
+  .section-subtitle {
+    @apply text-lg text-sage-600 mb-8 max-w-2xl mx-auto;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-ayurveda-600 to-earth-600 bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .bg-pattern {
+    background-image: radial-gradient(circle at 1px 1px, rgba(54, 151, 89, 0.1) 1px, transparent 0);
+    background-size: 40px 40px;
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
